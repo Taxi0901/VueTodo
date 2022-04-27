@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="bg-gray-50 px-4">
-                            <div class="error" v-if="state.error">{{ state.errorMessage }}</div>
+                            <div class="error py-5 px-5 mb-3 inline-flex text-center tracking-widest rounded bg-red-100 text-red-800" v-if="state.error">{{ state.errorMessage }}</div>
                         </div>
                         <div v-for="todo in state.todos" :class="{done: todo.completed, editing: todo === state.editObj}" :key="todo.id" class="bg-white px-4 py-5 sm:grid sm:grid-col-9 sm:gap-4 sm:px-6">
                             <dt class="text-sm pl-10 mt-3 font-medium text-gray-500 sm:col-span-3">{{todo.id}} <input type="checkbox" v-model="todo.completed" class="ml-4 focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" /></dt>
